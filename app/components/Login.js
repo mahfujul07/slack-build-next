@@ -17,8 +17,8 @@ function Login() {
           src="https://cdn.freebiesupply.com/logos/large/2x/slack-logo-icon.png"
           alt=""
         />
-        <h1>Sign in to the SpaceX</h1>
-        <p>spacex.slack.com</p>
+        <h1>Sign in to the CHATIFY</h1>
+        <a>mahfujulhuq.me</a>
 
         <Button onClick={signIn}>Sign in with Google</Button>
       </LoginInnerContainer>
@@ -33,6 +33,11 @@ const LoginContainer = styled.div`
   height: 100vh;
   display: grid;
   place-items: center;
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
 `;
 
 const LoginInnerContainer = styled.div`

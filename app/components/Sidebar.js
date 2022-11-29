@@ -25,10 +25,10 @@ function Sidebar() {
     <SidebarContainer>
       <SidebarHeader>
         <SidebarInfo>
-          <h2>SpaceX HQ</h2>
+          <h2>CHATIFY</h2>
           <h3>
             <FiberManualRecordIcon />
-            Mahfuz
+            {user?.displayName}
           </h3>
         </SidebarInfo>
         <CreateIcon />
