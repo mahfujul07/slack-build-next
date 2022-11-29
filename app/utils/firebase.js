@@ -1,6 +1,17 @@
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/firestore';
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
+
+// const firebaseConfig = {
+//   apiKey: "AIzaSyBAUmZtylTmztcyegO-zUQJwZZuTdnAZqM",
+//   authDomain: "chat-app-mahfuz.firebaseapp.com",
+//   databaseURL: "https://chat-app-mahfuz-default-rtdb.firebaseio.com",
+//   projectId: "chat-app-mahfuz",
+//   storageBucket: "chat-app-mahfuz.appspot.com",
+//   messagingSenderId: "321103549997",
+//   appId: "1:321103549997:web:d34659faa5be7b2c20caa4",
+//   measurementId: "G-439HX5ZSEB",
+// };
 
 const firebaseConfig = {
   apiKey: "AIzaSyCSbvB1hUEshKLQcAJk5Shk9YBCNIt2nzc",
@@ -12,10 +23,12 @@ const firebaseConfig = {
   measurementId: "G-WRP8TFXYC3",
 };
 
-firebase.initializeApp(firebaseConfig);
+// Initialize Firebase
+const app = firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+const auth = firebase.auth();
 
-const db = firestore();
-const auth = auth();
-const provider = new auth.GoogleAuthProvider();
+const provider = new firebase.auth.GoogleAuthProvider();
+// const analytics = getAnalytics(app);
 
-export { auth, provider, db };
+export { app, auth, db, provider };
